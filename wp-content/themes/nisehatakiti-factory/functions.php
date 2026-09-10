@@ -1,6 +1,7 @@
 <?php
 /**
  * Nisehatakiti Factory theme functions.
+ * Art-first layout: bundled factory illustration is the default architectural background.
  */
 
 if (!defined('ABSPATH')) exit;
