@@ -337,3 +337,53 @@ Text Domain: nisehatakiti-factory
   .nk-category-board--alumni{left:3%;top:55%}
   .nk-category-board--stage{right:3%;top:55%}
 }
+
+
+/* v0.9 generated factory artwork: the supplied portrait artwork is the actual scene */
+.nk-factory-art{
+  background-image:var(--nk-factory-art);
+  background-size:cover;
+  background-position:center top;
+  background-repeat:no-repeat;
+  background-attachment:scroll;
+}
+.nk-factory{
+  background:#050607;
+}
+.nk-factory-scene{
+  min-height:clamp(1280px,145vw,1750px);
+}
+.nk-reactor{
+  top:16%;
+  width:min(520px,40vw);
+}
+.nk-reactor__shell{
+  padding-top:clamp(185px,17vw,270px);
+}
+/* The artwork already contains the machine room. Keep the interface transparent enough to expose it. */
+.nk-factory-art__veil{
+  background:
+    linear-gradient(90deg,rgba(0,0,0,.18),transparent 12%,transparent 88%,rgba(0,0,0,.18)),
+    linear-gradient(180deg,rgba(0,0,0,.02),transparent 68%,rgba(0,0,0,.62));
+}
+.nk-product-line{
+  margin-top:-260px;
+  padding-top:340px;
+  min-height:760px;
+}
+.nk-product-line:before{
+  background:linear-gradient(180deg,transparent 0,rgba(5,7,8,.08) 30%,rgba(5,7,8,.72) 100%);
+}
+@media(max-width:1180px){
+  .nk-product-line{margin-top:-160px;padding-top:240px}
+}
+@media(max-width:860px){
+  .nk-factory-art{
+    background-image:var(--nk-factory-art-mobile);
+    background-size:cover;
+    background-position:center top;
+  }
+  .nk-factory-scene{min-height:1180px}
+  .nk-product-line{margin-top:-60px;padding-top:120px}
+  .nk-reactor{top:9%;width:88vw}
+}
