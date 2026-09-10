@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1800" preserveAspectRatio="xMidYMin slice">
+<defs>
+ <linearGradient id="bg" x2="0" y2="1"><stop stop-color="#090b0c"/><stop offset=".48" stop-color="#25292a"/><stop offset="1" stop-color="#111314"/></linearGradient>
+ <linearGradient id="pipe" x2="1"><stop stop-color="#0a0c0d"/><stop offset=".16" stop-color="#707476"/><stop offset=".43" stop-color="#d7d8d5"/><stop offset=".62" stop-color="#575b5c"/><stop offset="1" stop-color="#080a0b"/></linearGradient>
+ <linearGradient id="pipe2" y2="1"><stop stop-color="#d7d8d5"/><stop offset=".3" stop-color="#515557"/><stop offset=".7" stop-color="#17191a"/><stop offset="1" stop-color="#9da09f"/></linearGradient>
+ <filter id="grain"><feTurbulence type="fractalNoise" baseFrequency=".8" numOctaves="3" stitchTiles="stitch"/><feColorMatrix values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 .18 0"/></filter>
+ <pattern id="grid" width="44" height="44" patternUnits="userSpaceOnUse"><path d="M0 0H44M0 0V44" stroke="#aeb1ae" stroke-opacity=".06" stroke-width="2"/></pattern>
+</defs>
+<rect width="1600" height="1800" fill="url(#bg)"/><rect width="1600" height="1800" fill="url(#grid)"/>
+<!-- ceiling -->
+<g stroke="#0b0c0d" stroke-width="18" opacity=".9"><path d="M0 70H1600"/><path d="M0 150H1600"/><path d="M120 0V280M300 0V260M480 0V250M1120 0V250M1300 0V260M1480 0V280"/></g>
+<!-- far perspective tunnel -->
+<g fill="none" stroke="#d5d7d4" stroke-opacity=".28" stroke-width="5"><path d="M520 860L700 640L900 640L1080 860"/><path d="M560 1010L720 790L880 790L1040 1010"/><path d="M620 1160L740 960L860 960L980 1160"/><path d="M0 1800L735 1050M1600 1800L865 1050"/><path d="M220 1800L745 1130M1380 1800L855 1130"/></g>
+<!-- left pipe forest -->
+<g fill="none" stroke-linecap="round" stroke-linejoin="round">
+ <path d="M-80 120H240Q330 120 330 240V420Q330 520 440 520H600" stroke="#070809" stroke-width="112"/><path d="M-80 120H240Q330 120 330 240V420Q330 520 440 520H600" stroke="url(#pipe)" stroke-width="88"/>
+ <path d="M20 410H190Q270 410 270 520V760Q270 850 410 850H560" stroke="#08090a" stroke-width="96"/><path d="M20 410H190Q270 410 270 520V760Q270 850 410 850H560" stroke="url(#pipe2)" stroke-width="72"/>
+ <path d="M-70 820H150Q245 820 245 925V1190Q245 1290 410 1290H610" stroke="#090a0b" stroke-width="130"/><path d="M-70 820H150Q245 820 245 925V1190Q245 1290 410 1290H610" stroke="url(#pipe)" stroke-width="102"/>
+ <path d="M0 1420H210Q310 1420 310 1510V1800" stroke="#090a0b" stroke-width="120"/><path d="M0 1420H210Q310 1420 310 1510V1800" stroke="url(#pipe2)" stroke-width="92"/>
+ <path d="M470 0V310Q470 420 390 470L300 525" stroke="#08090a" stroke-width="78"/><path d="M470 0V310Q470 420 390 470L300 525" stroke="url(#pipe)" stroke-width="58"/>
+ <path d="M570 0V180Q570 300 500 360L420 430" stroke="#08090a" stroke-width="62"/><path d="M570 0V180Q570 300 500 360L420 430" stroke="url(#pipe2)" stroke-width="46"/>
+ <path d="M0 220L170 350Q250 410 220 520L150 760" stroke="#0a0b0c" stroke-width="48"/><path d="M0 220L170 350Q250 410 220 520L150 760" stroke="url(#pipe)" stroke-width="34"/>
+</g>
+<!-- right mirrored-ish pipe forest -->
+<g fill="none" stroke-linecap="round" stroke-linejoin="round">
+ <path d="M1680 120H1360Q1270 120 1270 240V420Q1270 520 1160 520H1000" stroke="#070809" stroke-width="112"/><path d="M1680 120H1360Q1270 120 1270 240V420Q1270 520 1160 520H1000" stroke="url(#pipe)" stroke-width="88"/>
+ <path d="M1580 410H1410Q1330 410 1330 520V760Q1330 850 1190 850H1040" stroke="#08090a" stroke-width="96"/><path d="M1580 410H1410Q1330 410 1330 520V760Q1330 850 1190 850H1040" stroke="url(#pipe2)" stroke-width="72"/>
+ <path d="M1670 820H1450Q1355 820 1355 925V1190Q1355 1290 1190 1290H990" stroke="#090a0b" stroke-width="130"/><path d="M1670 820H1450Q1355 820 1355 925V1190Q1355 1290 1190 1290H990" stroke="url(#pipe)" stroke-width="102"/>
+ <path d="M1600 1420H1390Q1290 1420 1290 1510V1800" stroke="#090a0b" stroke-width="120"/><path d="M1600 1420H1390Q1290 1420 1290 1510V1800" stroke="url(#pipe2)" stroke-width="92"/>
+ <path d="M1130 0V310Q1130 420 1210 470L1300 525" stroke="#08090a" stroke-width="78"/><path d="M1130 0V310Q1130 420 1210 470L1300 525" stroke="url(#pipe)" stroke-width="58"/>
+ <path d="M1030 0V180Q1030 300 1100 360L1180 430" stroke="#08090a" stroke-width="62"/><path d="M1030 0V180Q1030 300 1100 360L1180 430" stroke="url(#pipe2)" stroke-width="46"/>
+ <path d="M1600 220L1430 350Q1350 410 1380 520L1450 760" stroke="#0a0b0c" stroke-width="48"/><path d="M1600 220L1430 350Q1350 410 1380 520L1450 760" stroke="url(#pipe)" stroke-width="34"/>
+</g>
+<!-- central vessel and vertical pipes -->
+<g>
+ <path d="M650 190Q800 120 950 190L1030 370V980Q1030 1110 900 1180H700Q570 1110 570 980V370Z" fill="#202425" stroke="#090a0b" stroke-width="20"/>
+ <path d="M675 205Q800 155 925 205L990 380V970Q990 1075 880 1130H720Q610 1075 610 970V380Z" fill="#d4d5d1" fill-opacity=".88" stroke="#5c6060" stroke-width="7"/>
+ <ellipse cx="800" cy="200" rx="125" ry="45" fill="#777b7b" stroke="#101112" stroke-width="18"/>
+ <path d="M610 390H990M610 540H990M610 690H990M610 840H990" stroke="#555958" stroke-width="8" opacity=".8"/>
+ <path d="M735 0V180M800 0V145M865 0V180" stroke="url(#pipe)" stroke-width="38"/>
+</g>
+<!-- valve wheels -->
+<g fill="#252829" stroke="#c9ccca" stroke-width="8" opacity=".9"><circle cx="430" cy="580" r="55"/><circle cx="1170" cy="580" r="55"/><circle cx="315" cy="1040" r="48"/><circle cx="1285" cy="1040" r="48"/></g>
+<g stroke="#c9ccca" stroke-width="10"><path d="M430 520V640M370 580H490M1170 520V640M1110 580H1230"/></g>
+<!-- machinery clutter -->
+<g fill="none" stroke="#bfc2bf" stroke-opacity=".45" stroke-width="7"><path d="M90 320V690H260M1510 320V690H1340"/><path d="M100 1120H440V1360H160M1500 1120H1160V1360H1440"/><path d="M360 0L560 280M1240 0L1040 280"/><path d="M80 990L510 1050M1520 990L1090 1050"/></g>
+<!-- floor rails -->
+<g stroke="#8d918e" stroke-opacity=".55" fill="none"><path d="M680 1800L770 1080M920 1800L830 1080" stroke-width="18"/><path d="M0 1650L760 1090M1600 1650L840 1090" stroke-width="7"/><path d="M0 1730L760 1130M1600 1730L840 1130" stroke-width="7"/></g>
+<rect width="1600" height="1800" filter="url(#grain)" opacity=".42"/>
+</svg>
