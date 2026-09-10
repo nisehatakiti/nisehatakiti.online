@@ -1,97 +1,101 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 2200" preserveAspectRatio="xMidYMin slice">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 2200" preserveAspectRatio="xMidYMid slice">
 <defs>
- <linearGradient id="bg" x2="0" y2="1"><stop stop-color="#07090a"/><stop offset=".46" stop-color="#1a1d1e"/><stop offset="1" stop-color="#0b0d0e"/></linearGradient>
- <linearGradient id="steel" x2="1"><stop stop-color="#080a0b"/><stop offset=".18" stop-color="#575b5b"/><stop offset=".42" stop-color="#e2e2dc"/><stop offset=".62" stop-color="#757979"/><stop offset="1" stop-color="#0a0c0d"/></linearGradient>
- <linearGradient id="paper" x2="0" y2="1"><stop stop-color="#efefea"/><stop offset=".55" stop-color="#c7c8c2"/><stop offset="1" stop-color="#999d99"/></linearGradient>
- <pattern id="grid" width="56" height="56" patternUnits="userSpaceOnUse"><path d="M0 0H56M0 0V56" stroke="#6e7270" stroke-opacity=".15" stroke-width="2"/></pattern>
- <filter id="shadow"><feGaussianBlur stdDeviation="8"/></filter>
+ <radialGradient id="air" cx="50%" cy="42%" r="75%"><stop stop-color="#505452"/><stop offset=".38" stop-color="#202425"/><stop offset="1" stop-color="#07090a"/></radialGradient>
+ <linearGradient id="pipe" x2="1"><stop stop-color="#090b0c"/><stop offset=".12" stop-color="#4d5252"/><stop offset=".3" stop-color="#e6e7df"/><stop offset=".47" stop-color="#8e9391"/><stop offset=".72" stop-color="#272b2b"/><stop offset="1" stop-color="#080a0b"/></linearGradient>
+ <linearGradient id="pipeV" x2="0" y2="1"><stop stop-color="#e9e9e1"/><stop offset=".32" stop-color="#686d6b"/><stop offset=".72" stop-color="#171a1b"/><stop offset="1" stop-color="#090b0c"/></linearGradient>
+ <linearGradient id="tank" x2="1"><stop stop-color="#232728"/><stop offset=".15" stop-color="#b8bbb6"/><stop offset=".47" stop-color="#f0f0e8"/><stop offset=".73" stop-color="#777c79"/><stop offset="1" stop-color="#171a1b"/></linearGradient>
+ <linearGradient id="floor" x2="0" y2="1"><stop stop-color="#343837"/><stop offset=".2" stop-color="#171a1b"/><stop offset="1" stop-color="#060809"/></linearGradient>
+ <pattern id="mesh" width="28" height="28" patternUnits="userSpaceOnUse"><path d="M0 0H28M0 0V28" stroke="#d8d9d2" stroke-opacity=".075" stroke-width="2"/></pattern>
+ <filter id="deep"><feGaussianBlur stdDeviation="18"/></filter>
+ <filter id="hard"><feDropShadow dx="8" dy="14" stdDeviation="8" flood-opacity=".72"/></filter>
 </defs>
-<rect width="1600" height="2200" fill="url(#bg)"/>
-<rect width="1600" height="2200" fill="url(#grid)"/>
-<!-- distant ceiling and structural beams -->
-<g fill="none" stroke="#c7c8c2" stroke-opacity=".23" stroke-width="8">
- <path d="M90 0L440 470M250 0L620 520M490 0L720 430M1110 0L790 460M1380 0L980 520M1560 0L1150 470"/>
- <path d="M0 170H1600M0 410H1600M0 730H1600M0 1030H1600"/>
+<!-- atmosphere -->
+<rect width="1600" height="2200" fill="url(#air)"/>
+<rect width="1600" height="2200" fill="url(#mesh)"/>
+<!-- vanishing-point architecture -->
+<g fill="none" stroke="#9fa39f" stroke-opacity=".24">
+ <path d="M0 0L800 1210L1600 0M0 230L800 1210L1600 230M0 520L800 1210L1600 520" stroke-width="10"/>
+ <path d="M0 0L0 1450M160 0L260 1450M370 0L520 1450M560 0L680 1450M1040 0L920 1450M1230 0L1080 1450M1440 0L1340 1450M1600 0L1600 1450" stroke-width="7"/>
 </g>
-<!-- asymmetrical dense pipe network -->
-<g fill="none" stroke="#090b0c" stroke-width="112" stroke-linecap="round" stroke-linejoin="round" opacity=".92">
- <path d="M-80 110C210 110 150 360 420 390C600 410 500 610 360 760C240 890 290 1040 90 1120"/>
- <path d="M150 0C160 260 370 260 350 520C330 730 120 700 170 970C200 1140 430 1190 370 1450"/>
- <path d="M620 -40C630 230 520 330 600 510C700 730 570 800 470 930C330 1110 540 1250 600 1500"/>
- <path d="M1620 120C1380 120 1460 350 1250 430C1080 500 1160 690 1300 800C1470 930 1320 1060 1490 1180"/>
- <path d="M1450 -20C1450 210 1240 250 1290 510C1340 760 1500 720 1440 970C1390 1160 1180 1190 1270 1450"/>
- <path d="M990 -20C970 200 1090 350 1010 560C920 790 1080 850 1170 1010C1300 1240 1090 1320 1030 1520"/>
- <path d="M-40 1450C220 1370 300 1510 460 1640C600 1750 430 1910 650 2040"/>
- <path d="M1640 1430C1410 1360 1330 1530 1160 1650C1030 1750 1210 1920 980 2060"/>
-</g>
-<g fill="none" stroke="url(#steel)" stroke-width="88" stroke-linecap="round" stroke-linejoin="round">
- <path d="M-80 110C210 110 150 360 420 390C600 410 500 610 360 760C240 890 290 1040 90 1120"/>
- <path d="M150 0C160 260 370 260 350 520C330 730 120 700 170 970C200 1140 430 1190 370 1450"/>
- <path d="M620 -40C630 230 520 330 600 510C700 730 570 800 470 930C330 1110 540 1250 600 1500"/>
- <path d="M1620 120C1380 120 1460 350 1250 430C1080 500 1160 690 1300 800C1470 930 1320 1060 1490 1180"/>
- <path d="M1450 -20C1450 210 1240 250 1290 510C1340 760 1500 720 1440 970C1390 1160 1180 1190 1270 1450"/>
- <path d="M990 -20C970 200 1090 350 1010 560C920 790 1080 850 1170 1010C1300 1240 1090 1320 1030 1520"/>
- <path d="M-40 1450C220 1370 300 1510 460 1640C600 1750 430 1910 650 2040"/>
- <path d="M1640 1430C1410 1360 1330 1530 1160 1650C1030 1750 1210 1920 980 2060"/>
-</g>
-<!-- pipe seams -->
-<g fill="none" stroke="#111415" stroke-width="10" stroke-opacity=".9">
- <path d="M50 82C110 130 110 180 90 230M245 190C315 240 315 300 285 355M360 520C430 570 420 640 390 690M170 580C250 630 245 700 220 760M540 230C620 280 620 340 585 410M515 800C600 840 600 910 560 980M1350 160C1430 205 1420 270 1380 330M1210 500C1290 540 1290 610 1250 680M1430 720C1510 760 1510 830 1460 900M1020 250C1100 300 1100 360 1060 430M1080 790C1160 830 1160 900 1120 970"/>
-</g>
-<!-- central reactor silhouette -->
-<g transform="translate(470 250)">
- <path d="M165 80Q330-10 495 80L545 190V760Q330 870 115 760V190Z" fill="#0a0c0d" opacity=".55" filter="url(#shadow)"/>
- <path d="M150 55Q330-20 510 55L550 190V750Q330 830 110 750V190Z" fill="url(#paper)" stroke="#111415" stroke-width="14"/>
- <path d="M145 180H515M120 610H540" stroke="#6c706d" stroke-width="8" opacity=".55"/>
- <ellipse cx="330" cy="72" rx="165" ry="58" fill="url(#steel)" stroke="#101314" stroke-width="14"/>
- <ellipse cx="330" cy="68" rx="98" ry="34" fill="#171a1b" stroke="#6c706d" stroke-width="10"/>
- <circle cx="330" cy="68" r="28" fill="#d9d9d3"/>
- <g fill="#202425" stroke="#a5a7a1" stroke-width="5">
-  <circle cx="178" cy="155" r="18"/><circle cx="482" cy="155" r="18"/><circle cx="150" cy="510" r="18"/><circle cx="510" cy="510" r="18"/>
+<!-- deep rear machine mass -->
+<g opacity=".78">
+ <path d="M600 100Q800 40 1000 100V1040L800 1210L600 1040Z" fill="#121617" stroke="#8b908c" stroke-width="8"/>
+ <path d="M630 210Q800 150 970 210V940L800 1070L630 940Z" fill="#252a2a" stroke="#5c615e" stroke-width="6"/>
+ <path d="M680 290Q800 250 920 290V820L800 910L680 820Z" fill="#0c0f10"/>
+ <g stroke="#d8d9d2" stroke-opacity=".25" stroke-width="5" fill="none">
+  <path d="M620 360H980M620 520H980M620 680H980M660 220V950M800 170V1040M940 220V950"/>
  </g>
- <path d="M115 750H545V810H115Z" fill="#242728" stroke="#07090a" stroke-width="12"/>
 </g>
-<!-- machinery and catwalks -->
-<g fill="none" stroke="#b8bab5" stroke-width="7" stroke-opacity=".75">
- <path d="M0 560H430M1170 540H1600M0 890H330M1260 880H1600"/>
- <path d="M45 650V1180M170 700V1260M1420 640V1240M1535 590V1180"/>
- <path d="M0 1120L310 980M0 1240L330 1060M1600 1100L1280 960M1600 1250L1260 1060"/>
+<!-- central reactor behind content -->
+<g transform="translate(520 300)" filter="url(#hard)">
+ <path d="M115 190Q280 85 445 190L505 390V920L430 1020H130L55 920V390Z" fill="url(#tank)" stroke="#0b0d0e" stroke-width="18"/>
+ <ellipse cx="280" cy="190" rx="165" ry="64" fill="url(#pipe)" stroke="#111415" stroke-width="14"/>
+ <ellipse cx="280" cy="182" rx="98" ry="36" fill="#141819" stroke="#a6aaa5" stroke-width="8"/>
+ <circle cx="280" cy="182" r="22" fill="#e7e7df"/>
+ <path d="M75 470H485M65 720H495" stroke="#646966" stroke-width="9" opacity=".55"/>
+ <g fill="#171a1b" stroke="#c0c3bc" stroke-width="6">
+  <circle cx="105" cy="340" r="20"/><circle cx="455" cy="340" r="20"/><circle cx="110" cy="860" r="20"/><circle cx="450" cy="860" r="20"/>
+ </g>
 </g>
-<g fill="#151819" stroke="#9ea19d" stroke-width="5">
- <rect x="50" y="500" width="220" height="170"/><rect x="1330" y="510" width="220" height="170"/>
- <rect x="20" y="760" width="190" height="130"/><rect x="1390" y="780" width="190" height="130"/>
- <rect x="120" y="1080" width="200" height="160"/><rect x="1280" y="1070" width="200" height="160"/>
+<!-- side wall catwalks -->
+<g fill="none" stroke="#9da19d" stroke-width="10" stroke-opacity=".68">
+ <path d="M0 610L430 820L430 880L0 700M1600 610L1170 820L1170 880L1600 700"/>
+ <path d="M0 980L470 1060M1600 980L1130 1060"/>
+ <path d="M0 1140L500 1190M1600 1140L1100 1190"/>
 </g>
-<!-- deep central corridor -->
-<path d="M470 1260L800 1120L1130 1260V1880H470Z" fill="#0a0c0d" stroke="#777b77" stroke-width="8"/>
-<g fill="none" stroke="#d8d8d1" stroke-width="8" stroke-opacity=".48">
- <path d="M470 1260L800 1450L1130 1260M470 1420L800 1540L1130 1420M470 1600L800 1650L1130 1600M470 1780H1130"/>
- <path d="M610 1195V1880M800 1120V1880M990 1195V1880"/>
+<!-- midground pipe networks, receding -->
+<g fill="none" stroke="#07090a" stroke-width="118" stroke-linecap="round" stroke-linejoin="round">
+ <path d="M-70 120C180 100 160 330 380 360C560 390 470 540 350 660C210 800 280 960 90 1040"/>
+ <path d="M180 -40C180 180 390 220 360 460C330 680 120 650 160 880C190 1040 370 1100 440 1260"/>
+ <path d="M560 -50C570 160 470 260 540 440C620 630 530 710 430 850C350 970 450 1070 560 1200"/>
+ <path d="M1670 140C1430 100 1450 320 1240 380C1060 430 1150 610 1300 720C1470 850 1320 980 1490 1110"/>
+ <path d="M1430 -30C1440 180 1240 230 1280 470C1320 680 1500 650 1450 900C1410 1060 1240 1120 1180 1260"/>
+ <path d="M1030 -60C1010 150 1110 270 1040 470C960 650 1090 760 1180 900C1260 1040 1150 1120 1060 1260"/>
 </g>
-<path d="M740 1240H860V1780H740Z" fill="#f0f0e9" opacity=".12"/>
-<!-- floor rails -->
-<g fill="none" stroke-linecap="round">
- <path d="M0 1500C350 1560 540 1760 690 2200" stroke="#d4d5cf" stroke-width="20"/>
- <path d="M1600 1500C1250 1560 1060 1760 910 2200" stroke="#d4d5cf" stroke-width="20"/>
- <path d="M70 1540C400 1600 560 1800 720 2200" stroke="#222627" stroke-width="16"/>
- <path d="M1530 1540C1200 1600 1040 1800 880 2200" stroke="#222627" stroke-width="16"/>
+<g fill="none" stroke="url(#pipe)" stroke-width="92" stroke-linecap="round" stroke-linejoin="round">
+ <path d="M-70 120C180 100 160 330 380 360C560 390 470 540 350 660C210 800 280 960 90 1040"/>
+ <path d="M180 -40C180 180 390 220 360 460C330 680 120 650 160 880C190 1040 370 1100 440 1260"/>
+ <path d="M560 -50C570 160 470 260 540 440C620 630 530 710 430 850C350 970 450 1070 560 1200"/>
+ <path d="M1670 140C1430 100 1450 320 1240 380C1060 430 1150 610 1300 720C1470 850 1320 980 1490 1110"/>
+ <path d="M1430 -30C1440 180 1240 230 1280 470C1320 680 1500 650 1450 900C1410 1060 1240 1120 1180 1260"/>
+ <path d="M1030 -60C1010 150 1110 270 1040 470C960 650 1090 760 1180 900C1260 1040 1150 1120 1060 1260"/>
+</g>
+<!-- pipe joints -->
+<g fill="none" stroke="#111415" stroke-width="15" stroke-opacity=".95">
+ <path d="M85 90C135 125 145 175 130 225M285 220C345 260 345 315 320 365M350 510C410 550 405 620 370 680M150 540C220 580 220 650 185 710M500 150C560 190 560 250 530 305M500 720C570 760 570 825 530 885M1350 150C1420 190 1420 250 1385 315M1210 450C1280 490 1280 550 1240 610M1450 690C1520 730 1520 790 1480 850M1040 220C1100 260 1100 320 1065 380M1090 650C1150 690 1150 750 1115 810"/>
+</g>
+<!-- floor perspective -->
+<path d="M0 1180L800 1210L1600 1180V2200H0Z" fill="url(#floor)"/>
+<g fill="none" stroke="#a8aca7" stroke-opacity=".42">
+ <path d="M0 1280L800 1210L1600 1280M0 1430L800 1300L1600 1430M0 1620L800 1420L1600 1620M0 1860L800 1580L1600 1860" stroke-width="8"/>
+ <path d="M0 1180L650 2200M260 1180L720 2200M520 1190L770 2200M800 1210V2200M1080 1190L830 2200M1340 1180L880 2200M1600 1180L950 2200" stroke-width="7"/>
+</g>
+<!-- deep corridor -->
+<g>
+ <path d="M610 1030L800 930L990 1030V1690L800 1830L610 1690Z" fill="#080a0b" stroke="#c3c5bd" stroke-width="9"/>
+ <path d="M660 1080L800 1010L940 1080V1580L800 1680L660 1580Z" fill="#1b1f20" stroke="#676c69" stroke-width="6"/>
+ <g fill="none" stroke="#d8d9d2" stroke-opacity=".35" stroke-width="6">
+  <path d="M620 1170L800 1100L980 1170M620 1320L800 1240L980 1320M620 1480L800 1390L980 1480"/>
+ </g>
+ <path d="M755 1080H845V1600H755Z" fill="#f4f4ed" opacity=".11"/>
+</g>
+<!-- foreground huge pipes, strongest depth -->
+<g fill="none" stroke="#060809" stroke-width="178" stroke-linecap="round" stroke-linejoin="round">
+ <path d="M-110 980C120 950 270 1100 440 1260C590 1400 500 1570 300 1710C150 1820 170 2000 400 2190"/>
+ <path d="M1710 1030C1480 980 1340 1130 1170 1290C1020 1430 1120 1600 1320 1740C1470 1840 1430 2020 1200 2200"/>
+</g>
+<g fill="none" stroke="url(#pipe)" stroke-width="142" stroke-linecap="round" stroke-linejoin="round">
+ <path d="M-110 980C120 950 270 1100 440 1260C590 1400 500 1570 300 1710C150 1820 170 2000 400 2190"/>
+ <path d="M1710 1030C1480 980 1340 1130 1170 1290C1020 1430 1120 1600 1320 1740C1470 1840 1430 2020 1200 2200"/>
 </g>
 <!-- lower conveyor machinery -->
-<g fill="#151819" stroke="#8d918d" stroke-width="7">
- <rect x="0" y="1710" width="1600" height="70"/>
- <rect x="0" y="1880" width="1600" height="60"/>
+<g filter="url(#hard)">
+ <path d="M0 1720H1600V1835H0Z" fill="#101314" stroke="#777c77" stroke-width="8"/>
+ <path d="M0 1910H1600V2010H0Z" fill="#171b1c" stroke="#777c77" stroke-width="8"/>
+ <g fill="#c8cac3" stroke="#111415" stroke-width="9"><circle cx="25" cy="1777" r="24"/><circle cx="87" cy="1777" r="24"/><circle cx="149" cy="1777" r="24"/><circle cx="211" cy="1777" r="24"/><circle cx="273" cy="1777" r="24"/><circle cx="335" cy="1777" r="24"/><circle cx="397" cy="1777" r="24"/><circle cx="459" cy="1777" r="24"/><circle cx="521" cy="1777" r="24"/><circle cx="583" cy="1777" r="24"/><circle cx="645" cy="1777" r="24"/><circle cx="707" cy="1777" r="24"/><circle cx="769" cy="1777" r="24"/><circle cx="831" cy="1777" r="24"/><circle cx="893" cy="1777" r="24"/><circle cx="955" cy="1777" r="24"/><circle cx="1017" cy="1777" r="24"/><circle cx="1079" cy="1777" r="24"/><circle cx="1141" cy="1777" r="24"/><circle cx="1203" cy="1777" r="24"/><circle cx="1265" cy="1777" r="24"/><circle cx="1327" cy="1777" r="24"/><circle cx="1389" cy="1777" r="24"/><circle cx="1451" cy="1777" r="24"/><circle cx="1513" cy="1777" r="24"/><circle cx="1575" cy="1777" r="24"/><circle cx="25" cy="1960" r="21"/><circle cx="87" cy="1960" r="21"/><circle cx="149" cy="1960" r="21"/><circle cx="211" cy="1960" r="21"/><circle cx="273" cy="1960" r="21"/><circle cx="335" cy="1960" r="21"/><circle cx="397" cy="1960" r="21"/><circle cx="459" cy="1960" r="21"/><circle cx="521" cy="1960" r="21"/><circle cx="583" cy="1960" r="21"/><circle cx="645" cy="1960" r="21"/><circle cx="707" cy="1960" r="21"/><circle cx="769" cy="1960" r="21"/><circle cx="831" cy="1960" r="21"/><circle cx="893" cy="1960" r="21"/><circle cx="955" cy="1960" r="21"/><circle cx="1017" cy="1960" r="21"/><circle cx="1079" cy="1960" r="21"/><circle cx="1141" cy="1960" r="21"/><circle cx="1203" cy="1960" r="21"/><circle cx="1265" cy="1960" r="21"/><circle cx="1327" cy="1960" r="21"/><circle cx="1389" cy="1960" r="21"/><circle cx="1451" cy="1960" r="21"/><circle cx="1513" cy="1960" r="21"/><circle cx="1575" cy="1960" r="21"/></g>
 </g>
-<g fill="#d0d1ca" stroke="#171a1b" stroke-width="8">
- <circle cx="40" cy="1800" r="24"/><circle cx="104" cy="1800" r="24"/><circle cx="168" cy="1800" r="24"/><circle cx="232" cy="1800" r="24"/><circle cx="296" cy="1800" r="24"/><circle cx="360" cy="1800" r="24"/><circle cx="424" cy="1800" r="24"/><circle cx="488" cy="1800" r="24"/><circle cx="552" cy="1800" r="24"/><circle cx="616" cy="1800" r="24"/><circle cx="680" cy="1800" r="24"/><circle cx="744" cy="1800" r="24"/><circle cx="808" cy="1800" r="24"/><circle cx="872" cy="1800" r="24"/><circle cx="936" cy="1800" r="24"/><circle cx="1000" cy="1800" r="24"/><circle cx="1064" cy="1800" r="24"/><circle cx="1128" cy="1800" r="24"/><circle cx="1192" cy="1800" r="24"/><circle cx="1256" cy="1800" r="24"/><circle cx="1320" cy="1800" r="24"/><circle cx="1384" cy="1800" r="24"/><circle cx="1448" cy="1800" r="24"/><circle cx="1512" cy="1800" r="24"/><circle cx="1576" cy="1800" r="24"/>
- <circle cx="40" cy="1950" r="22"/><circle cx="104" cy="1950" r="22"/><circle cx="168" cy="1950" r="22"/><circle cx="232" cy="1950" r="22"/><circle cx="296" cy="1950" r="22"/><circle cx="360" cy="1950" r="22"/><circle cx="424" cy="1950" r="22"/><circle cx="488" cy="1950" r="22"/><circle cx="552" cy="1950" r="22"/><circle cx="616" cy="1950" r="22"/><circle cx="680" cy="1950" r="22"/><circle cx="744" cy="1950" r="22"/><circle cx="808" cy="1950" r="22"/><circle cx="872" cy="1950" r="22"/><circle cx="936" cy="1950" r="22"/><circle cx="1000" cy="1950" r="22"/><circle cx="1064" cy="1950" r="22"/><circle cx="1128" cy="1950" r="22"/><circle cx="1192" cy="1950" r="22"/><circle cx="1256" cy="1950" r="22"/><circle cx="1320" cy="1950" r="22"/><circle cx="1384" cy="1950" r="22"/><circle cx="1448" cy="1950" r="22"/><circle cx="1512" cy="1950" r="22"/><circle cx="1576" cy="1950" r="22"/>
-</g>
-<!-- foreground pipes -->
-<g fill="none" stroke="#07090a" stroke-width="132" stroke-linecap="round">
- <path d="M-70 1260C160 1230 260 1350 430 1450C550 1520 510 1650 380 1730"/>
- <path d="M1670 1290C1450 1250 1360 1390 1200 1490C1080 1560 1110 1690 1240 1780"/>
-</g>
-<g fill="none" stroke="url(#steel)" stroke-width="104" stroke-linecap="round">
- <path d="M-70 1260C160 1230 260 1350 430 1450C550 1520 510 1650 380 1730"/>
- <path d="M1670 1290C1450 1250 1360 1390 1200 1490C1080 1560 1110 1690 1240 1780"/>
+<!-- foreground structural edges -->
+<g fill="none" stroke="#060809" stroke-width="34" opacity=".9">
+ <path d="M0 0V2200M1600 0V2200"/>
 </g>
 </svg>
