@@ -3,7 +3,7 @@ Theme Name: Nisehatakiti Factory
 Theme URI: https://nisehatakiti.online/
 Author: Nisehatakiti
 Description: Manga industrial storefront for WordPress products.
-Version: 0.5.0
+Version: 0.8.0
 License: GPL-2.0-or-later
 Text Domain: nisehatakiti-factory
 */
@@ -184,4 +184,156 @@ Text Domain: nisehatakiti-factory
 @media(max-width:860px){
   .nk-factory-art{background-image:var(--nk-factory-art-mobile);background-size:auto 100%;background-repeat:repeat-y}
   .nk-factory-scene{min-height:1180px}
+}
+
+
+/* v0.8 art-first pass: the factory illustration is the architecture; HTML only occupies its surfaces */
+.nk-factory{
+  background:#050708;
+  min-height:100vh;
+  isolation:isolate;
+}
+.nk-factory-art{
+  position:absolute;
+  inset:0;
+  min-height:100%;
+  background-image:var(--nk-factory-art);
+  background-repeat:no-repeat;
+  background-position:center top;
+  background-size:100% auto;
+  filter:contrast(1.08) brightness(.98);
+}
+.nk-factory-art__veil{
+  z-index:1;
+  background:
+    linear-gradient(90deg,rgba(0,0,0,.46),transparent 11%,transparent 89%,rgba(0,0,0,.46)),
+    linear-gradient(180deg,rgba(2,4,5,.12),transparent 14%,transparent 70%,rgba(2,4,5,.82));
+}
+.nk-factory-content{position:relative;z-index:3}
+.nk-factory-scene{
+  min-height:1550px;
+  height:auto;
+  background:transparent!important;
+}
+.nk-factory-scene:before,
+.nk-factory-scene:after{
+  background:none!important;
+  mix-blend-mode:normal;
+}
+
+/* Central copy sits directly on the illustrated reactor instead of creating a second flat reactor. */
+.nk-reactor{
+  top:15%;
+  width:min(510px,38vw);
+  z-index:10;
+  filter:none;
+  transform:translateX(-50%);
+}
+.nk-reactor__shell{
+  min-height:680px;
+  padding:clamp(190px,18vw,275px) 34px 34px;
+  transform:none;
+  background:transparent;
+}
+.nk-reactor__shell:before,
+.nk-reactor__shell:after{display:none}
+.nk-reactor__name,
+.nk-reactor__sub,
+.nk-reactor h1,
+.nk-reactor p,
+.nk-reactor__cta{
+  text-shadow:0 2px 0 rgba(255,255,255,.18),0 10px 24px rgba(0,0,0,.18);
+}
+.nk-reactor__name{font-size:clamp(3rem,4.7vw,4.8rem)}
+.nk-reactor__cta{
+  margin-top:6px;
+  padding:12px 22px;
+  background:rgba(12,15,16,.88);
+  color:#f4f4ee;
+  border:1px solid rgba(255,255,255,.18);
+  box-shadow:0 10px 22px rgba(0,0,0,.38);
+}
+
+/* Signboards remain HTML so links are real, but are treated as objects installed in the factory. */
+.nk-category-board{
+  background:
+    radial-gradient(circle at 8% 8%,#141617 0 4px,transparent 5px),
+    radial-gradient(circle at 92% 92%,#141617 0 4px,transparent 5px),
+    linear-gradient(135deg,rgba(248,248,241,.98),rgba(206,208,201,.96));
+  border:3px solid #111415;
+  box-shadow:
+    inset 0 0 0 3px rgba(255,255,255,.56),
+    inset 0 0 0 5px rgba(30,34,34,.42),
+    14px 24px 34px rgba(0,0,0,.68);
+  filter:none;
+}
+.nk-category-board:before,.nk-category-board:after{display:none}
+.nk-category-board--alumni{left:4%;top:17%}
+.nk-category-board--stage{right:4%;top:18%}
+.nk-category-board--portal-left{left:5%;top:52%}
+.nk-category-board--portal-right{right:5%;top:52%}
+.nk-category-board a{
+  background:
+    repeating-linear-gradient(0deg,transparent 0 8px,rgba(0,0,0,.018) 9px 10px),
+    linear-gradient(90deg,transparent,rgba(255,255,255,.14),transparent);
+}
+.nk-category-board em{
+  box-shadow:0 8px 0 rgba(0,0,0,.18);
+  border:1px solid rgba(255,255,255,.12);
+}
+
+/* The illustrated lower machinery stays visible behind the real WooCommerce cards. */
+.nk-product-line{
+  min-height:920px;
+  padding-top:64px;
+  background:transparent!important;
+}
+.nk-product-line:before{
+  background:linear-gradient(180deg,rgba(5,7,8,.04),rgba(5,7,8,.18) 52%,rgba(5,7,8,.78));
+}
+.nk-conveyor{
+  background:rgba(8,10,11,.32);
+  border-top-color:rgba(48,53,52,.9);
+  border-bottom-color:rgba(22,25,25,.96);
+  backdrop-filter:none;
+}
+.nk-product-crate{
+  background:
+    repeating-linear-gradient(0deg,rgba(0,0,0,.025) 0 1px,transparent 1px 10px),
+    linear-gradient(135deg,rgba(246,246,239,.98),rgba(197,200,193,.98));
+  box-shadow:
+    inset 0 0 0 2px #8e918d,
+    10px 16px 0 rgba(0,0,0,.48),
+    0 24px 28px rgba(0,0,0,.56);
+}
+.nk-factory-values{
+  background:linear-gradient(135deg,rgba(239,239,233,.96),rgba(195,198,191,.96));
+}
+
+/* Do not restart the factory image in the footer/outro. It is one continuous place. */
+.nk-factory-outro{
+  min-height:320px;
+  background:rgba(5,7,8,.74)!important;
+  backdrop-filter:none;
+}
+.nk-factory-outro:before{background:transparent}
+
+@media(max-width:1180px){
+  .nk-factory-art{background-size:auto 2200px}
+  .nk-reactor{width:min(510px,46vw)}
+  .nk-category-board--alumni{left:3%;top:19%}
+  .nk-category-board--stage{right:3%;top:19%}
+}
+@media(max-width:860px){
+  .nk-factory-art{
+    background-image:var(--nk-factory-art-mobile);
+    background-size:auto 1450px;
+    background-position:center top;
+    background-repeat:no-repeat;
+  }
+  .nk-factory-scene{min-height:1180px}
+  .nk-reactor{top:8%;width:88vw}
+  .nk-reactor__shell{padding-top:175px;min-height:620px}
+  .nk-category-board--alumni{left:3%;top:55%}
+  .nk-category-board--stage{right:3%;top:55%}
 }
