@@ -21,9 +21,8 @@ add_action('after_setup_theme', 'nisehatakiti_factory_setup');
 function nisehatakiti_factory_assets(): void {
     wp_enqueue_style('nisehatakiti-factory', get_stylesheet_uri(), array(), wp_get_theme()->get('Version'));
 
-    // The factory artwork is intentionally a real image layer. SVG is only the fallback
-    // until a generated factory image is uploaded in Appearance > Customize.
-    $fallback = get_template_directory_uri() . '/assets/factory-manga.svg';
+    // The bundled generated factory artwork is the default scene. Customizer uploads can override it.
+    $fallback = get_template_directory_uri() . '/assets/factory-art.jpg';
     $desktop  = get_theme_mod('nk_factory_background_image', $fallback);
     $mobile   = get_theme_mod('nk_factory_background_mobile_image', $desktop);
 
@@ -51,7 +50,7 @@ function nisehatakiti_factory_customize_register($wp_customize): void {
         'nk_factory_background_image',
         array(
             'label'       => __('Desktop factory artwork', 'nisehatakiti-factory'),
-            'description' => __('Recommended: portrait image, at least 1600×2400px. This is the actual page background.', 'nisehatakiti-factory'),
+            'description' => __('Recommended: portrait image. This image is the actual page background; the HTML interface is layered over it.', 'nisehatakiti-factory'),
             'section'     => 'nk_factory_art',
             'settings'    => 'nk_factory_background_image',
         )
