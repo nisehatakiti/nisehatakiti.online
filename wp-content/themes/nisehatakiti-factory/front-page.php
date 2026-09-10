@@ -4,7 +4,7 @@ get_header();
 $shop_url = function_exists('wc_get_page_permalink') ? wc_get_page_permalink('shop') : home_url('/products/');
 $category_links = array('alumni'=>home_url('/product-category/alumni/'),'stage'=>home_url('/product-category/stage-art/'),'portal'=>home_url('/product-category/portal/'));
 ?>
-<main class="nk-factory">
+<main class="nk-factory"><div class="nk-factory-art" aria-hidden="true"></div><div class="nk-factory-art__veil" aria-hidden="true"></div><div class="nk-factory-content">
 <section class="nk-factory-scene" id="top">
 <div class="nk-factory-scene__pipes" aria-hidden="true"></div><div class="nk-factory-scene__ink" aria-hidden="true"></div>
 <div class="nk-category-board nk-category-board--alumni"><a href="<?php echo esc_url($category_links['alumni']); ?>"><span class="nk-board-icon">●●●</span><b>ALUMNI</b><strong>同窓会</strong><small>つながる、<br>またあの頃のように。</small><em>製品を見る　→</em></a></div>
@@ -24,5 +24,5 @@ $category_links = array('alumni'=>home_url('/product-category/alumni/'),'stage'=
 <div class="nk-factory-values"><div><i>￥</i><span><b>すべての製品</b><strong>¥1,980</strong></span></div><div><i>ϟ</i><span><b>すぐに使える</b><small>インストールしてすぐ使える</small></span></div><div><i>◈</i><span><b>小さなツールが、</b><strong>大きな現場を動かす。</strong></span></div></div>
 </section>
 <section class="nk-factory-outro" id="about"><div class="nk-factory-outro__pipes" aria-hidden="true"></div><div class="nk-factory-outro__content"><p>Nisehatakitiは、WordPressで使える<br>小さくて便利な道具をつくる工場です。</p><a href="<?php echo esc_url(home_url('/about/')); ?>">Nisehatakitiについて　→</a></div></section>
-</main>
+</div></main>
 <?php get_footer(); ?>
