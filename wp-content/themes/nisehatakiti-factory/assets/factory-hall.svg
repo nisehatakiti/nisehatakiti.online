@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1200" preserveAspectRatio="xMidYMid slice">
+<defs>
+  <linearGradient id="bg" x2="0" y2="1"><stop stop-color="#28302f"/><stop offset=".45" stop-color="#1c2223"/><stop offset="1" stop-color="#303332"/></linearGradient>
+  <linearGradient id="steel" x2="1"><stop stop-color="#141a1c"/><stop offset=".35" stop-color="#5e6667"/><stop offset=".52" stop-color="#b0aaa0"/><stop offset=".68" stop-color="#394143"/><stop offset="1" stop-color="#111719"/></linearGradient>
+  <linearGradient id="light" x2="0" y2="1"><stop stop-color="#e8edf0" stop-opacity=".95"/><stop offset="1" stop-color="#8a9a9d" stop-opacity="0"/></linearGradient>
+  <linearGradient id="floor" x2="0" y2="1"><stop stop-color="#202829"/><stop offset="1" stop-color="#4b4842"/></linearGradient>
+  <pattern id="grid" width="120" height="92" patternUnits="userSpaceOnUse"><path d="M0 0H120M0 0V92" fill="none" stroke="#9ca7a7" stroke-opacity=".13" stroke-width="2"/></pattern>
+  <filter id="glow"><feGaussianBlur stdDeviation="12" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  <filter id="noise"><feTurbulence baseFrequency=".8" numOctaves="2" stitchTiles="stitch" type="fractalNoise" result="n"/><feColorMatrix in="n" type="saturate" values="0"/><feComponentTransfer><feFuncA type="table" tableValues="0 .05"/></feComponentTransfer><feBlend in="SourceGraphic" mode="multiply"/></filter>
+</defs>
+<rect width="1600" height="1200" fill="url(#bg)"/>
+<path d="M640 0H960L1120 830H480Z" fill="url(#light)" opacity=".62"/>
+<path d="M800 20V1120M560 1120L760 0M1040 1120L840 0" stroke="#d9e0df" stroke-opacity=".13" stroke-width="4"/>
+<g fill="url(#steel)" stroke="#0e1416" stroke-width="4">
+<path d="M0 0H270L470 980H0Z"/><path d="M1600 0H1330L1130 980H1600Z"/>
+</g>
+<g fill="url(#grid)" opacity=".75"><path d="M0 0H360L520 920H0Z"/><path d="M1600 0H1240L1080 920H1600Z"/></g>
+<g fill="none" stroke="url(#steel)" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M-80 170H205Q285 170 285 250V440Q285 500 360 500H530" stroke-width="70"/>
+  <path d="M-40 620H190Q245 620 245 675V850Q245 900 330 900H510" stroke-width="48"/>
+  <path d="M1680 170H1395Q1315 170 1315 250V440Q1315 500 1240 500H1070" stroke-width="70"/>
+  <path d="M1640 620H1410Q1355 620 1355 675V850Q1355 900 1270 900H1090" stroke-width="48"/>
+</g>
+<g fill="none" stroke="#c4c9c4" stroke-opacity=".42" stroke-width="4">
+  <path d="M-80 170H205Q285 170 285 250V440Q285 500 360 500H530"/>
+  <path d="M1680 170H1395Q1315 170 1315 250V440Q1315 500 1240 500H1070"/>
+</g>
+<g stroke="#7c817c" stroke-width="12" fill="none" opacity=".85">
+  <path d="M80 520L470 690M120 580L470 780M1520 520L1130 690M1480 580L1130 780"/>
+</g>
+<g stroke="#cba65e" stroke-width="3" opacity=".8">
+  <path d="M0 370H420M0 780H510M1600 370H1180M1600 780H1090"/>
+  <path d="M155 0V900M255 0V960M1445 0V900M1345 0V960"/>
+</g>
+<g fill="#efe7d3" filter="url(#glow)">
+ <rect x="175" y="325" width="115" height="8" rx="4"/><rect x="1310" y="325" width="115" height="8" rx="4"/>
+ <rect x="350" y="610" width="100" height="7" rx="3"/><rect x="1150" y="610" width="100" height="7" rx="3"/>
+ <circle cx="520" cy="260" r="9"/><circle cx="1080" cy="260" r="9"/>
+</g>
+<g fill="#2a3132" stroke="#6f7776" stroke-width="5">
+ <path d="M400 420H620V820H430Z"/><path d="M1200 420H980V820H1170Z"/>
+</g>
+<g stroke="#9ba19b" stroke-width="3" opacity=".55"><path d="M430 470H590M430 520H590M430 570H590M1170 470H1010M1170 520H1010M1170 570H1010"/></g>
+<g>
+ <path d="M650 155Q650 80 800 80Q950 80 950 155V740H650Z" fill="url(#steel)" stroke="#182021" stroke-width="8"/>
+ <ellipse cx="800" cy="155" rx="150" ry="48" fill="#9ba19a" stroke="#202829" stroke-width="8"/>
+ <path d="M690 280H910M680 330H920M675 650H925" stroke="#e0d9c9" stroke-opacity=".25" stroke-width="4"/>
+ <g stroke="#2d3536" stroke-width="8"><path d="M690 190V700M730 190V700M870 190V700M910 190V700"/></g>
+ <path d="M620 390H980" stroke="#b6a67f" stroke-width="14"/><path d="M640 400H960" stroke="#2b3334" stroke-width="36"/>
+</g>
+<path d="M800 750L1260 1200H340Z" fill="url(#floor)"/>
+<g stroke="#b5a981" stroke-opacity=".7" stroke-width="5"><path d="M760 750L550 1200M840 750L1050 1200"/><path d="M800 750V1200"/></g>
+<g stroke="#e8dfc7" stroke-opacity=".25" stroke-width="3"><path d="M520 1040H1080M470 1110H1130M590 960H1010"/></g>
+<g fill="#181e1f" stroke="#686f6e" stroke-width="4">
+ <path d="M0 910H430L510 1080H0Z"/><path d="M1600 910H1170L1090 1080H1600Z"/>
+</g>
+<g stroke="#9a8250" stroke-width="4" opacity=".8"><path d="M0 920H430M1170 920H1600"/><path d="M80 900V1080M170 900V1080M1430 900V1080M1520 900V1080"/></g>
+<rect width="1600" height="1200" filter="url(#noise)" opacity=".75"/>
+</svg>
