@@ -119,3 +119,69 @@ Text Domain: nisehatakiti-factory
  .nk-product-line{margin-top:0;padding-top:36px}
  .nk-conveyor{transform:none}
 }
+
+
+/* v0.7 generated-art direction: one real factory image behind all HTML */
+.nk-factory{position:relative;background:#050708;overflow:clip}
+.nk-factory-art{
+  position:absolute;
+  z-index:0;
+  inset:0;
+  background-image:var(--nk-factory-art);
+  background-repeat:repeat-y;
+  background-position:center top;
+  background-size:100% auto;
+  pointer-events:none;
+}
+.nk-factory-art__veil{
+  position:absolute;
+  z-index:1;
+  inset:0;
+  pointer-events:none;
+  background:
+    linear-gradient(90deg,rgba(2,4,5,.28),transparent 13%,transparent 87%,rgba(2,4,5,.28)),
+    linear-gradient(180deg,rgba(2,4,5,.18),transparent 8%,rgba(2,4,5,.06) 65%,rgba(2,4,5,.58));
+}
+.nk-factory-content{position:relative;z-index:2}
+.nk-factory-scene,
+.nk-product-line,
+.nk-factory-outro{background:transparent!important}
+.nk-factory-scene{min-height:1550px}
+.nk-factory-scene__pipes,
+.nk-product-line__pipes,
+.nk-factory-outro__pipes{display:none}
+.nk-factory-scene:before{
+  z-index:2;
+  background:
+    radial-gradient(ellipse at 50% 48%,rgba(0,0,0,.02) 0 22%,rgba(0,0,0,.22) 76%,rgba(0,0,0,.52)),
+    linear-gradient(90deg,rgba(0,0,0,.2),transparent 16%,transparent 84%,rgba(0,0,0,.2));
+}
+.nk-reactor{z-index:6}
+.nk-category-board{z-index:8}
+.nk-factory-gate{z-index:7}
+.nk-product-line{
+  min-height:920px;
+  margin-top:0;
+  padding-top:80px;
+}
+.nk-product-line:before{
+  background:linear-gradient(180deg,rgba(5,7,8,.08),rgba(5,7,8,.2) 42%,rgba(5,7,8,.72));
+}
+.nk-conveyor{
+  background:rgba(13,16,17,.74);
+  backdrop-filter:blur(1px);
+}
+.nk-product-crate{
+  background:rgba(231,231,222,.96);
+}
+.nk-factory-values{
+  background:rgba(226,226,216,.96);
+}
+.nk-factory-outro{
+  background:rgba(6,8,9,.78)!important;
+  backdrop-filter:blur(3px);
+}
+@media(max-width:860px){
+  .nk-factory-art{background-image:var(--nk-factory-art-mobile);background-size:auto 100%;background-repeat:repeat-y}
+  .nk-factory-scene{min-height:1180px}
+}
