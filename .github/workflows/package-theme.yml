@@ -21,9 +21,10 @@ jobs:
 
       - name: Create theme ZIP
         run: |
+          rm -rf dist
           mkdir -p dist
           cd wp-content/themes
-          zip -r "../../../dist/nisehatakiti-factory.zip" nisehatakiti-factory
+          zip -r "../../dist/nisehatakiti-factory.zip" nisehatakiti-factory
 
       - name: Upload theme artifact
         uses: actions/upload-artifact@v4
